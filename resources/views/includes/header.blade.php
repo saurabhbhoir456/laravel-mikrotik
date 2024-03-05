@@ -8,15 +8,15 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-<link href="{{ mix('/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ mix('/css/datatables.css') }}" rel="stylesheet">
+@vite('resources/css/app.css')
+@vite('resources/css/bootstrap.css')
+@vite('resources/css/datatables.css')
 
-<script src="{{ mix('/js/jquery.js') }}"></script>
+@vite('resources/js/jquery.js')
 
-<script src="{{ mix('/js/popper.js') }}"></script>
-<script src="{{ mix('/js/bootstrap.js') }}"></script>
-<script src="{{ mix('/js/datatables.js') }}"></script>
+@vite('resources/js/popper.js')
+@vite('resources/js/bootstrap.js')
+@vite('resources/js/datatables.js')
 
 {{--<script>if (window.module) module = window.module;</script>--}}
 
