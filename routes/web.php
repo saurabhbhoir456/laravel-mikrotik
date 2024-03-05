@@ -18,10 +18,12 @@ Route::get('/', function () {
 // Mikrotik API functions
 Route::group(['prefix' => 'mikrotik'], function () {
     Route::get('', 'Mikrotik@index');
+    Route::get('activeusers', 'Mikrotik@activeusers');
     Route::get('dhcpleases', 'Mikrotik@dhcpleases');
     Route::get('dnscache', 'Mikrotik@dnscache');
     Route::get('dnsstatic', 'Mikrotik@dnsstatic');
     Route::get('interface', 'Mikrotik@interface');
     Route::get('queue', 'Mikrotik@queue');
     Route::get('thedudemap', 'Mikrotik@thedudemap');
+    
 });

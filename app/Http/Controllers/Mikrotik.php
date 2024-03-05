@@ -60,4 +60,15 @@ class Mikrotik extends Controller
         return view('mikrotik.simplequeue', ['queue' => $ARRAY, 'rosipaddress' => config('mikrotik.rosipaddress'),]);
     }
 
+    public function activeusers(){
+        $this->client->write('/ppp/active/print');
+        $READ = $this->client->read(false);
+        $ARRAY = $this->client->parseResponse($READ);
+        $this->client->disconnect();
+        // echo '<pre>'; 
+        // print_r($ARRAY); 
+        // echo '</pre>';
+        return view('mikrotik.activeuser', ['activeusers' => $ARRAY, 'rosipaddress' => config('mikrotik.rosipaddress'),]); 
+    }
+
 }
