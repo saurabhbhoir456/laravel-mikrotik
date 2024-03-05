@@ -13,10 +13,10 @@
     <title>Mikrotik API</title>
 
     {{--Laravel mixed files--}}
-    <link rel="stylesheet" href="{{ mix('/css/vendor.css') }}">
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-    <script src="{{ mix('/js/vendor.pre.js') }}"></script>
-    <script src="{{ mix('/js/app.js') }}"></script>
+    @vite('resources/css/vendor.css')
+    @vite('resources/css/app.css')
+    @vite('resources/js/vendor.pre.js')
+    @vite('resources/js/app.js')
 
 </head>
 <body>
@@ -34,7 +34,7 @@
 
 </div>
 
-<script src="{{ mix('/js/vendor.pos.js') }}"></script>
+@vite('resources/js/vendor.pos.js')
 
 </body>
 </html>
